@@ -1,7 +1,7 @@
 public class MyArrayList<T> implements MyList<T> {
-    private Object[] arr;
+    private T[] arr;
     private int size;
-public MyArrayList(Object[] arr){
+public MyArrayList(T[] arr){
     this.arr = arr;
     this.size = arr.length;
 }
@@ -56,7 +56,7 @@ public int size(){
 
     @Override
     public int lastIndexOf(Object o) {
-        for(int i = size-1; i >= 0;i++){
+        for(int i = size-1; i >= 0;i--){
             if(arr[i]==o){
                 return i;
             }
