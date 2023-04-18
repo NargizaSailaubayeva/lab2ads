@@ -7,7 +7,10 @@ public class Main {
         System.out.println(nan.indexOf(5));
         System.out.println(nan.lastIndexOf(7));
         System.out.println(nan.contains(6));
+
+        nan.add(13,2);
         nan.add(3);
+        nan.add(56);
         for( int i=0; i<nan.size(); i++){
             System.out.print(nan.get(i) + " ");
         }

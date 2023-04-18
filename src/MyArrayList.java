@@ -30,7 +30,12 @@ public class MyArrayList<T> implements MyList<T> {
 
     @Override
     public void add(T item, int index) {
-
+        checkIndex(index);
+        increaseBuffer();
+        for(int i = size; i>=index; i--){
+            arr[i+1] = arr[i];
+        }
+        arr[index] = item;
     }
     private void increaseBuffer(){
         T[] arr2 = (T[]) new Object[arr.length * 2];
@@ -38,6 +43,12 @@ public class MyArrayList<T> implements MyList<T> {
             arr2[i] = (T) arr[i];
         }
         arr=arr2;
+        size++;
+    }
+    private void checkIndex(int index){
+        if (index <0 || index >= size){
+            throw new IndexOutOfBoundsException();
+        }
     }
     @Override
     public boolean remove(T item) {
