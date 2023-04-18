@@ -17,6 +17,13 @@ public int size(){
         }
     return false;
     }
+    private void increaseBuffer(){
+    T[] arr2 = (T[]) new Object[arr.length * 2];
+    for(int i=0; i<arr.length; i++){
+        arr2[i] = (T) arr[i];
+    }
+    arr=arr2;
+    }
 
     @Override
     public void add(T item) {
@@ -40,7 +47,9 @@ public int size(){
 
     @Override
     public void clear() {
-
+    T[] arr2 = (T[]) new Object[5];
+    arr=arr2;
+    size = 0;
     }
 
     @Override
