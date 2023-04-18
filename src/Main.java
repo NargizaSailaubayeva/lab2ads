@@ -11,8 +11,13 @@ public class Main {
         nan.add(13,2);
         nan.add(3);
         nan.add(56);
+        nan.add(55);
+        nan.remove(4);
+        nan.removed(3);
         for( int i=0; i<nan.size(); i++){
             System.out.print(nan.get(i) + " ");
         }
+
+
     }
 }

@@ -25,9 +25,11 @@ public class MyLinkedList<T> implements MyList<T> {
     }
 
     @Override
-    public T remove(int index) {
+    public T removed(int index) {
         return null;
     }
+
+
 
     @Override
     public void clear() {
