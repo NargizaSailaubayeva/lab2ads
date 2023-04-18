@@ -10,7 +10,12 @@ public int size(){
     }
     @Override
     public boolean contains(Object o) {
-        return false;
+        for(int i=0;i<size;i++){
+            if(arr[i]==o){
+               return true;
+            }
+        }
+    return false;
     }
 
     @Override

@@ -6,5 +6,6 @@ public class Main {
         System.out.println(arr.get(3));
         System.out.println(arr.indexOf(8));
         System.out.println(arr.lastIndexOf(7));
+        System.out.println(arr.contains(6));
     }
 }
