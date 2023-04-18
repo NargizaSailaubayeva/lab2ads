@@ -49,10 +49,9 @@ public int size(){
             if(arr[i]==o){
                 return i;
             }
-            else{
-                return -1;
-            }
+
         }
+        return -1;
     }
 
     @Override
