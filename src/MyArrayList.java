@@ -1,11 +1,11 @@
 public class MyArrayList<T> implements MyList<T> {
     private T[] arr;
     private int size;
-public MyArrayList(T[] arr){
+    public MyArrayList(T[] arr){
     this.arr = arr;
     this.size = arr.length;
 }
-public int size(){
+    public int size(){
     return size;
     }
     @Override
@@ -17,16 +17,14 @@ public int size(){
         }
     return false;
     }
-    private void increaseBuffer(){
-    T[] arr2 = (T[]) new Object[arr.length * 2];
-    for(int i=0; i<arr.length; i++){
-        arr2[i] = (T) arr[i];
-    }
-    arr=arr2;
-    }
+
 
     @Override
     public void add(T item) {
+    if (size == arr.length){
+        increaseBuffer();
+    }
+    arr[size++] = item;
 
     }
 
@@ -34,7 +32,13 @@ public int size(){
     public void add(T item, int index) {
 
     }
-
+    private void increaseBuffer(){
+        T[] arr2 = (T[]) new Object[arr.length * 2];
+        for(int i=0; i<arr.length; i++){
+            arr2[i] = (T) arr[i];
+        }
+        arr=arr2;
+    }
     @Override
     public boolean remove(T item) {
         return false;

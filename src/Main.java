@@ -1,12 +1,15 @@
 public class Main {
     public static void main(String[] args) {
-        Integer[] array = {4,7,8,6,7,5};
-        MyArrayList<Integer> arr = new MyArrayList<>(array);
-        System.out.println(arr.size());
-        System.out.println(arr.get(3));
-        System.out.println(arr.indexOf(5));
-        System.out.println(arr.lastIndexOf(7));
-        System.out.println(arr.contains(6));
-
+        Integer[] array = {4,7,8,6,5};
+        MyArrayList<Integer> nan = new MyArrayList<>(array);
+        System.out.println(nan.size());
+        System.out.println(nan.get(3));
+        System.out.println(nan.indexOf(5));
+        System.out.println(nan.lastIndexOf(7));
+        System.out.println(nan.contains(6));
+        nan.add(3);
+        for( int i=0; i<nan.size(); i++){
+            System.out.print(nan.get(i) + " ");
+        }
     }
 }
