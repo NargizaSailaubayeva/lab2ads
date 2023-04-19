@@ -1,5 +1,4 @@
 # Laboratory 2 Algorithms and Data Structures
-___
 ![hello](https://media3.giphy.com/media/E1w0yvMxBIv5M8WkL8/giphy.gif)
 
 Description
