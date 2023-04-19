@@ -74,7 +74,31 @@ public class MyLinkedList<T> implements MyList<T> {
 
     @Override
     public boolean remove(T item) {
-        return false;
+        MyNode newNode = new MyNode((T) item);
+        MyNode currentNode = head;
+        while (currentNode != null && !currentNode.data.equals(item)) {
+            currentNode = currentNode.next;
+        }
+        if (currentNode == null) {
+            return false;
+        } else if (currentNode == head) {
+            head = head.next;
+            if (head != null){
+                head.previous = null;
+            }
+            else{
+                tail = null;
+            }
+        } else if (currentNode == tail) {
+            tail = tail.previous;
+            tail.next = null;
+        }
+        else{
+            currentNode.previous.next = currentNode.next;
+            currentNode.next.previous = currentNode.previous;
+        }
+        size--;
+        return true;
     }
 
     @Override
@@ -85,7 +109,6 @@ public class MyLinkedList<T> implements MyList<T> {
 
     @Override
     public void clear() {
-
     }
 
     @Override
@@ -130,7 +153,7 @@ public class MyLinkedList<T> implements MyList<T> {
         MyNode currentElement = tail;
         int count = size;
         for (int i = size - 1; i >= 0; i--) {
-            if (currentElement.data.equals(o)){
+            if (currentElement.data.equals(o)) {
                 return i;
             }
             currentElement = currentElement.previous;
@@ -139,8 +162,8 @@ public class MyLinkedList<T> implements MyList<T> {
         return -1;
     }
 
-        @Override
-        public void sort () {
+    @Override
+    public void sort() {
 
-        }
     }
+}
