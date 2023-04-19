@@ -20,3 +20,10 @@ We have interface `MyList`
     }
 ```
 `MyArrayList` and `MyLinkedList` are implementation of a linked list in Java, which implement the 'MyList' interface
++ ***Array*** is a data structure of related data items, a set of variables of the same type.
++ ***ArrayList*** is a variable length Collection class. ArrayList can also be of generic type <T>
++ An Iterator is an object that can be used to loop through collections. MyArrayList can also implement an Iterable<T> interface 
++ ***LinkedList***  is a series of connected nodes
++ A node is an object that must hold a value and some references to other nodes 
+![array](https://media.geeksforgeeks.org/wp-content/uploads/20210908120146/ArrayListIntegerObjecttype-660x268.png)
+![linked](https://media.geeksforgeeks.org/wp-content/uploads/20220816144425/LLdrawio.png)
