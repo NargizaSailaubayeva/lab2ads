@@ -511,4 +511,4 @@ Bug reports and\or pull requests are
 
 ![welcome](https://poster.keepcalmandposters.com/4220629.jpg)
 
-![bye]([https://media.tenor.com/5DcYGrosKfQAAAAC/bye-see-you.gif](https://media.tenor.com/5g95hQQSoj8AAAAC/bye-bye-bye.gif))
+![bye](https://media2.giphy.com/media/6cfHDQ4NeBk2EltWCs/giphy.gif?cid=6c09b95218247772e91926797670966eaec8ad257b680d25&rid=giphy.gif&ct=g)
