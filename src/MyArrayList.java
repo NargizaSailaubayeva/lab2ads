@@ -1,7 +1,6 @@
-/*
+/**
  * MyArrayList is a custom implementation of the Java ArrayList class.
  * @param <T> the type of elements stored in this list
- * @param o the element whose presence in this list is to be tested
  */
 public class MyArrayList<T> implements MyList<T> {
     // create and provided constructors for the MyArrayList

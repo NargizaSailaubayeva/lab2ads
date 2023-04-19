@@ -1,9 +1,25 @@
+/**
+ * this is implementation of a linked list in Java, which implements th 'MyList' interface
+ * @param <T> the type of elements stored in this list
+ * size(): returns the number of elements in the list.
+ * contains(Object o): returns true if the list contains the specified element.
+ * add(T item): adds the specified element to the end of the list.
+ * add(T item, int index): adds the specified element at the specified index in the list.
+ * remove(T item): removes the first occurrence of the specified element from the list, if it exists.
+ * removed(int index): removes the element at the specified index from the list and returns it.
+ * clear(): removes all elements from the list.
+ * get(int index): returns the element at the specified index in the list.
+ * indexOf(Object o): returns the index of the first occurrence of the specified element in the list, or -1 if the element is not in the list.
+ * lastIndexOf(Object o): returns the index of the last occurrence of the specified element in the list, or -1 if the element is not in the list.
+ * checkIndex(int index) checks if the specified index is valid and throws an 'IndexOutOfBoundsException' if it is not
+ * sort(): sorts the elements in the list in ascending order using the natural ordering of the elements.
+ */
 public class MyLinkedList<T> implements MyList<T> {
     private int size = 0;
     private MyNode head;
     private MyNode tail;
 
-    public class MyNode {
+    public class MyNode { // represents a node in the linked list, has 3 fields: next, previous, data
         MyNode next;
         MyNode previous;
         T data;
