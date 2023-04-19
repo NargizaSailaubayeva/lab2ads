@@ -111,6 +111,9 @@ public class MyLinkedList<T> implements MyList<T> {
 
     @Override
     public void clear() {
+        head = null;
+        tail = null;
+        size = 0;
     }
 
     @Override
