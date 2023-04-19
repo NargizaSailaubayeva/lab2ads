@@ -32,6 +32,7 @@ public class Main {
         System.out.println(link.lastIndexOf(6));
         link.remove(8);
         link.removed(4);
+        link.sort();
         for (int i = 0; i<link.size(); i++){
             System.out.print(link.get(i) + " ");
         }
