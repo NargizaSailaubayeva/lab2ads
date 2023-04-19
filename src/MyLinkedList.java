@@ -2,16 +2,19 @@ public class MyLinkedList<T> implements MyList<T> {
     private int size = 0;
     private MyNode head;
     private MyNode tail;
+
     public class MyNode {
         MyNode next;
         MyNode previous;
         T data;
+
         MyNode(T data) {
             this.data = data;
             this.next = null;
             this.previous = null;
         }
     }
+
     @Override
     public int size() {
         return size;
@@ -24,12 +27,11 @@ public class MyLinkedList<T> implements MyList<T> {
 
     @Override
     public void add(T item) {
-        MyNode newNode = new MyNode((T) item);
+        MyNode newNode = new MyNode(item);
         if (size == 0) {
             head = newNode;
             tail = newNode;
-        }
-        else{
+        } else {
             tail.next = newNode;
             newNode.previous = tail;
             tail = newNode;
@@ -40,7 +42,27 @@ public class MyLinkedList<T> implements MyList<T> {
 
     @Override
     public void add(T item, int index) {
-
+        MyNode newNode = new MyNode(item);
+        if (size == 0) {
+            if (head == null) {
+                add(item);
+                return;
+            }
+        } else if (index == 0) {
+            newNode.next = head;
+            head.previous = newNode;
+            head = newNode;
+        } else {
+            MyNode currentElement = head;
+            for (int i = 0; i < index; i++) {
+                currentElement = currentElement.next;
+            }
+            newNode.next = currentElement;
+            newNode.previous = currentElement.previous;
+            currentElement.previous.next = newNode;
+            currentElement.previous = newNode;
+        }
+        size++;
     }
 
     @Override
@@ -54,7 +76,6 @@ public class MyLinkedList<T> implements MyList<T> {
     }
 
 
-
     @Override
     public void clear() {
 
@@ -63,23 +84,23 @@ public class MyLinkedList<T> implements MyList<T> {
     @Override
     public T get(int index) {
         checkIndex(index);
-        if (index < size/2){
+        if (index < size / 2) {
             MyNode currentElement = head;
-            for (int i =0; i<index; i++){
-                currentElement=currentElement.next;
+            for (int i = 0; i < index; i++) {
+                currentElement = currentElement.next;
             }
             return currentElement.data;
-        }
-        else{
+        } else {
             MyNode currentElement = tail;
-            for (int i = size - 1; i > index; i--){
+            for (int i = size - 1; i > index; i--) {
                 currentElement = currentElement.previous;
             }
             return currentElement.data;
         }
     }
-    private void checkIndex(int index){
-        if (index < 0 || index >= size){
+
+    private void checkIndex(int index) {
+        if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         }
     }

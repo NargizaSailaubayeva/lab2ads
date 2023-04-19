@@ -25,8 +25,10 @@ public class Main {
         link.add(7);
         link.add(8);
         link.add(6);
+        link.add(9,2);
+        link.add(4,3);
         for (int i = 0; i<link.size(); i++){
-            System.out.println(link.get(i) + " ");
+            System.out.print(link.get(i) + " ");
         }
     }
 }
