@@ -103,7 +103,9 @@ public class MyLinkedList<T> implements MyList<T> {
 
     @Override
     public T removed(int index) {
-        return null;
+        T temp = get(index);
+        remove(get(index));
+        return temp;
     }
 
 
