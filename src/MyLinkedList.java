@@ -24,7 +24,7 @@ public class MyLinkedList<T> implements MyList<T> {
     public boolean contains(Object o) {
         MyNode currentElement = head;
         for (int i = 0; i < size; i++) {
-            if (currentElement.data.equals(o)){
+            if (currentElement.data.equals(o)) {
                 return true;
             }
             currentElement = currentElement.next;
@@ -115,8 +115,8 @@ public class MyLinkedList<T> implements MyList<T> {
     @Override
     public int indexOf(Object o) {
         MyNode currentElement = head;
-        for (int i = 0; i<size; i++){
-            if (currentElement.data.equals(o)){
+        for (int i = 0; i < size; i++) {
+            if (currentElement.data.equals(o)) {
                 return i;
             }
             currentElement = currentElement.next;
@@ -127,12 +127,20 @@ public class MyLinkedList<T> implements MyList<T> {
 
     @Override
     public int lastIndexOf(Object o) {
-
-        return 0;
+        MyNode currentElement = tail;
+        int count = size;
+        for (int i = size - 1; i >= 0; i--) {
+            if (currentElement.data.equals(o)){
+                return i;
+            }
+            currentElement = currentElement.previous;
+        }
+        System.err.println("It does not exist");
+        return -1;
     }
 
-    @Override
-    public void sort() {
+        @Override
+        public void sort () {
 
+        }
     }
-}
