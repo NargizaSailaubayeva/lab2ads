@@ -114,8 +114,15 @@ public class MyLinkedList<T> implements MyList<T> {
 
     @Override
     public int indexOf(Object o) {
-
-        return 0;
+        MyNode currentElement = head;
+        for (int i = 0; i<size; i++){
+            if (currentElement.data.equals(o)){
+                return i;
+            }
+            currentElement = currentElement.next;
+        }
+        System.err.println("It does not exist");
+        return -1;
     }
 
     @Override

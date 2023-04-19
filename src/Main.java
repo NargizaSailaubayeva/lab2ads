@@ -28,6 +28,7 @@ public class Main {
         link.add(9,2);
         link.add(4,3);
         System.out.println(link.contains(7));
+        System.out.println(link.indexOf(8));
         for (int i = 0; i<link.size(); i++){
             System.out.print(link.get(i) + " ");
         }
