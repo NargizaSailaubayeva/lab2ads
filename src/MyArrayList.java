@@ -80,9 +80,8 @@ public class MyArrayList<T> implements MyList<T> {
 
     @Override
     public void clear() {
-    T[] arr2 = (T[]) new Object[5];
-    arr=arr2;
-    size = 0;
+        this.arr = (T[]) new Object[5];
+        this.size = 0;
     }
 
     @Override

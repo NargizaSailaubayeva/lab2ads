@@ -15,6 +15,7 @@ public class Main {
         nan.remove(4);
         nan.removed(3);
         nan.sort();
+        nan.clear();
         for( int i=0; i<nan.size(); i++){
             System.out.print(nan.get(i) + " ");
         }
