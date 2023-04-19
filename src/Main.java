@@ -19,6 +19,7 @@ public class Main {
         for( int i=0; i<nan.size(); i++){
             System.out.print(nan.get(i) + " ");
         }
+        MyLinkedList link = new MyLinkedList();
 
 
     }

@@ -1,4 +1,17 @@
 public class MyLinkedList<T> implements MyList<T> {
+    private int size = 0;
+    private MyNode head;
+    private MyNode tail;
+    public class MyNode {
+        MyNode next;
+        MyNode previous;
+        T data;
+        MyNode(T data) {
+            this.data = data;
+            this.next = null;
+            this.previous = null;
+        }
+    }
     @Override
     public int size() {
         return 0;
