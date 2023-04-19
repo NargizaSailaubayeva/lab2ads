@@ -14,7 +14,7 @@ public class MyLinkedList<T> implements MyList<T> {
     }
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
@@ -24,8 +24,19 @@ public class MyLinkedList<T> implements MyList<T> {
 
     @Override
     public void add(T item) {
-
+        MyNode newNode = new MyNode((T) item);
+        if (size == 0) {
+            head = newNode;
+            tail = newNode;
+        }
+        else{
+            tail.next = newNode;
+            newNode.previous = tail;
+            tail = newNode;
+        }
+        size++;
     }
+
 
     @Override
     public void add(T item, int index) {
@@ -51,16 +62,37 @@ public class MyLinkedList<T> implements MyList<T> {
 
     @Override
     public T get(int index) {
-        return null;
+        checkIndex(index);
+        if (index < size/2){
+            MyNode currentElement = head;
+            for (int i =0; i<index; i++){
+                currentElement=currentElement.next;
+            }
+            return currentElement.data;
+        }
+        else{
+            MyNode currentElement = tail;
+            for (int i = size - 1; i > index; i--){
+                currentElement = currentElement.previous;
+            }
+            return currentElement.data;
+        }
+    }
+    private void checkIndex(int index){
+        if (index < 0 || index >= size){
+            throw new IndexOutOfBoundsException();
+        }
     }
 
     @Override
     public int indexOf(Object o) {
+
         return 0;
     }
 
     @Override
     public int lastIndexOf(Object o) {
+
         return 0;
     }
 
