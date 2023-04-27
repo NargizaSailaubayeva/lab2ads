@@ -18,11 +18,13 @@ public class Main {
         nan.remove(4);
         nan.removed(3);
         nan.sort();
-        nan.clear();
+        nan.add(66);
+        //nan.clear();
+        nan.sortsubl();
         for( int i=0; i<nan.size(); i++){
             System.out.print(nan.get(i) + " ");
         }
-
+        /*
         MyLinkedList link = new MyLinkedList(); //check MyLinkedList
         link.add(5);
         link.add(7);
@@ -39,6 +41,6 @@ public class Main {
         link.clear();
         for (int i = 0; i<link.size(); i++){
             System.out.print(link.get(i) + " ");
-        }
+        } */
     }
 }

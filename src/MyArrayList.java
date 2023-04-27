@@ -81,6 +81,7 @@ public class MyArrayList<T> implements MyList<T> {
             throw new IndexOutOfBoundsException();
         }
     }
+
     @Override
     public boolean remove(T item) { // remove item in array list
         removed(indexOf(item));
@@ -207,5 +208,26 @@ public class MyArrayList<T> implements MyList<T> {
             }
         }
 
+        public void sortsubl(){
+        if(arr[0] instanceof Integer){
+            int index1, index2;
+            int[] p = new int[size];
+            for(int i =0; i< size; i++) {
+                index1 =i;
+                index2 = p.length-1;
+                p[i] = (Integer) arr[i];
+            }
+            mergeSort(p, 0, p.length-1);
+            for (int i = 0; i<size; i++){
+                index1=i;
+                index2 =p.length-1;
+                arr[i]= (T)(Integer) p[i];
+            }
+        }
+        else{
+            System.out.println("something wrong");
+        }
+
+        }
 
 }
