@@ -50,6 +50,7 @@ public class Main {
         stack.push(5);
         stack.push(9);
         Integer rty = stack.pop();
+        System.out.println(stack.peek());
         System.out.println(rty);
         System.out.println(stack.isEmpty());
     }
