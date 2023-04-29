@@ -49,6 +49,8 @@ public class Main {
         MyArrayListStack<Integer> stack = new MyArrayListStack<Integer>();
         stack.push(5);
         stack.push(9);
+        Integer rty = stack.pop();
+        System.out.println(rty);
         System.out.println(stack.isEmpty());
     }
 }

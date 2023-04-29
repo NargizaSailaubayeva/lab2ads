@@ -97,8 +97,9 @@ public class MyArrayList<T> implements MyList<T> {
      */
     public T removed(int index) { // remove item by index
         checkIndex(index);
-        T[] arrNew = (T[]) new Object[size];
+        T[] arrNew = (T[]) new Object[arr.length];
         int p = 0;
+        T uio = arr[index];
         for (int i = 0; i < arr.length; i++) {
             if (i == index) { // checks every element if it = index
                 continue;
@@ -110,7 +111,7 @@ public class MyArrayList<T> implements MyList<T> {
             arr[i] = arrNew[i];
         }
         size--; // reduces the size when we remove item
-        return (T) arr;
+        return uio;
     }
 
     @Override

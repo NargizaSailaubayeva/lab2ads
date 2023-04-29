@@ -7,7 +7,12 @@ public class MyArrayListStack<E> {
     public void push(E element){
         stack.add(element);
     }
-
+    public E pop(){
+        if (isEmpty()){
+            throw new EmptyStackException();
+        }
+        return stack.removed(stack.size() -1);
+    }
     public boolean isEmpty(){
         if (stack.size() == 0){
             return true;
