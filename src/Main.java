@@ -1,9 +1,10 @@
 /**
  * check MyArrayList and MyLinkedList if it works
  */
+
 public class Main {
     public static void main(String[] args) {
-        Integer[] array = {4,7,8,6,5}; // give array to check it
+        /** Integer[] array = {4,7,8,6,5}; // give array to check it
         MyArrayList<Integer> nan = new MyArrayList<>(array); //check MyArrayList
         System.out.println(nan.size());
         System.out.println(nan.get(3));
@@ -23,8 +24,8 @@ public class Main {
         nan.sortsubl();
         for( int i=0; i<nan.size(); i++){
             System.out.print(nan.get(i) + " ");
-        }
-        /*
+        } */
+        /**
         MyLinkedList link = new MyLinkedList(); //check MyLinkedList
         link.add(5);
         link.add(7);
