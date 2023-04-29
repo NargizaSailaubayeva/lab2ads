@@ -47,6 +47,7 @@ public class Main {
             System.out.print(link.get(i) + " ");
         } */
         MyArrayListStack<Integer> stack = new MyArrayListStack<Integer>();
-
+        stack.push(5);
+        stack.push(9);
     }
 }
