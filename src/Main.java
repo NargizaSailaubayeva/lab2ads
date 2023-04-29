@@ -49,5 +49,6 @@ public class Main {
         MyArrayListStack<Integer> stack = new MyArrayListStack<Integer>();
         stack.push(5);
         stack.push(9);
+        System.out.println(stack.isEmpty());
     }
 }
