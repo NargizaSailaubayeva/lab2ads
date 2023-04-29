@@ -27,4 +27,7 @@ public class MyArrayListStack<E> {
             return false;
         }
     }
+    public int size() {
+        return stack.size();
+    }
 }
