@@ -1,27 +1,30 @@
 /**
  * check MyArrayList and MyLinkedList if it works
  */
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        /** Integer[] array = {4,7,8,6,5}; // give array to check it
-        MyArrayList<Integer> nan = new MyArrayList<>(array); //check MyArrayList
-        System.out.println(nan.size());
-        System.out.println(nan.get(3));
-        System.out.println(nan.indexOf(5));
-        System.out.println(nan.lastIndexOf(7));
-        System.out.println(nan.contains(6));
-
-        nan.add(13,2);
+        /** MyArrayList<Integer> nan = new MyArrayList<>(); //check MyArrayList
         nan.add(3);
         nan.add(56);
         nan.add(55);
-        nan.remove(4);
+        nan.add(44);
+        nan.add(33);
+        nan.remove(3);
         nan.removed(3);
         nan.sort();
         nan.add(66);
         //nan.clear();
-        nan.sortsubl();
+        //nan.sortsubl();
+        System.out.println(nan.size());
+        System.out.println(nan.get(3));
+        System.out.println(nan.indexOf(3));
+        System.out.println(nan.lastIndexOf(2));
+        System.out.println(nan.contains(6));
         for( int i=0; i<nan.size(); i++){
             System.out.print(nan.get(i) + " ");
         } */
@@ -43,5 +46,7 @@ public class Main {
         for (int i = 0; i<link.size(); i++){
             System.out.print(link.get(i) + " ");
         } */
+        MyArrayListStack<Integer> stack = new MyArrayListStack<Integer>();
+
     }
 }

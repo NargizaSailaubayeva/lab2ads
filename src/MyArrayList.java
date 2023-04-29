@@ -6,9 +6,9 @@ public class MyArrayList<T> implements MyList<T> {
     // create and provided constructors for the MyArrayList
     private T[] arr; // create array
     private int size; // create size of array
-    public MyArrayList(T[] arr){
-    this.arr = arr;
-    this.size = arr.length;
+    public MyArrayList(){
+        arr = (T[]) new Object[5];
+        size = 0;
 }
 
     public int size(){  // it returns size of array
@@ -85,7 +85,6 @@ public class MyArrayList<T> implements MyList<T> {
     @Override
     public boolean remove(T item) { // remove item in array list
         removed(indexOf(item));
-
         return true;
     }
     /**
@@ -98,7 +97,7 @@ public class MyArrayList<T> implements MyList<T> {
      */
     public T removed(int index) { // remove item by index
         checkIndex(index);
-        T[] arrNew = (T[]) new Object[arr.length];
+        T[] arrNew = (T[]) new Object[size];
         int p = 0;
         for (int i = 0; i < arr.length; i++) {
             if (i == index) { // checks every element if it = index
