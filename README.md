@@ -503,17 +503,9 @@ public class Main {
     }
 }         
 ``` 
-## Installation
-IntelliJ IDEA 2022.3.1
-## Contributing
-Bug reports and\or pull requests are 
-![gif](https://img.wattpad.com/6c151ba821ca2c749493262d427fb9d0324ec0fc/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f6147354e6948476d6c62704b50673d3d2d3636303937343137322e313537323431383735386537393136303532343031303939363231302e676966)
 
-![welcome](https://poster.keepcalmandposters.com/4220629.jpg)
 
-![bye](https://media2.giphy.com/media/6cfHDQ4NeBk2EltWCs/giphy.gif?cid=6c09b95218247772e91926797670966eaec8ad257b680d25&rid=giphy.gif&ct=g)
-
-# Laboratory 2 Algorithms and Data Structures
+# Laboratory 3 Algorithms and Data Structures
 ## Description
 ***Stack Implementation***
 + Create a new class named MyLinkedListStack for the MyLinkedList implementation or MyArrayListStack for the MyArrayList implementation.
@@ -554,3 +546,230 @@ Bug reports and\or pull requests are
 + T peek() – Returns a reference to the front element of the queue
 + T enqueue(T) – Adds the element at the end of the queue
 + T dequeue() – Retrieves and deletes the front element of the queue
+![image](https://user-images.githubusercontent.com/125569063/235354565-1a281ca8-625a-4928-b106-90994aea6e2c.png)
+![image](https://user-images.githubusercontent.com/125569063/235354589-d3428c2b-60b3-46e1-bdb3-5ecf63ec12ba.png)
+
+**MyArrayListStack**
+```java
+import java.util.EmptyStackException;
+public class MyArrayListStack<E> {
+    private MyArrayList<E> stack;
+    public MyArrayListStack(){ //constructor
+        stack = new MyArrayList<>();
+    }
+    // method push
+
+    /**
+     * add the element to the stack
+     * @param element that will be added
+     */
+    public void push(E element){
+        stack.add(element);
+    }
+    // method pop
+
+    /**
+     * return top element of the stack and remove it
+     * @return the top element
+     * @throws EmptyStackException if the stack is empty
+     */
+    public E pop(){
+        if (isEmpty()){
+            throw new EmptyStackException();
+        }
+        return stack.removed(stack.size() -1);
+    }
+    // method peek
+
+    /**
+     * return the first elements of stack
+     * @return the first elements of the stack
+     * @throws EmptyStackException if the stack is empty
+     */
+    public E peek(){
+        if(isEmpty()){
+            throw new EmptyStackException();
+        }
+        return stack.get(stack.size() - 1);
+    }
+    // method isEmpty
+
+    /**
+     * if stack is empty return true, if not false
+     * @return true or false
+     */
+    public boolean isEmpty(){
+        if (stack.size() == 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    // method size
+
+    /**
+     * return size or number of elements in stack
+     * @return size
+     */
+    public int size() {
+        return stack.size();
+    }
+}
+
+```
+         
+**MyLinkedListQueue**
+
+```java
+import java.util.NoSuchElementException;
+
+public class MyLinkedListQueue<E> {
+    private MyLinkedList<E> queue;
+    public MyLinkedListQueue(){ //constructor
+        queue = new MyLinkedList<>();
+    }
+    // method enqueue
+    /**
+     * add the element to the queue
+     * @param element the element that will add in queue
+     */
+
+    public void enqueue(E element){
+        queue.add(element, size()-1);
+    }
+    // method dequeue
+
+    /**
+     * remove the first elements of queue and return it
+     * @return the first elements of the queue
+     * @throws NoSuchElementException if the queue is empty
+     */
+    public E dequeue(){
+        if (isEmpty()){
+            throw new NoSuchElementException();
+        }
+        return queue.removed(0);
+    }
+    //method peek
+
+    /**
+     * return the first elements of queue
+     * @return the first elements of the queue
+     * @throws NoSuchElementException if the queue is empty
+     */
+    public E peek(){
+        if (isEmpty()){
+            throw new NoSuchElementException();
+        }
+        else{
+            return queue.get(0);
+        }
+    }
+    // method isEmpty
+
+    /**
+     * if queue is empty return true, if not false
+     * @return true or false
+     */
+    public boolean isEmpty(){
+        if (queue.size() == 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    //method size
+
+    /**
+     * return size or the number of elements in queue
+     * @return size
+     */
+    public int size() {
+        return queue.size();
+    }
+}
+
+```  
+
+**Main**
+```java
+/**
+ * check MyArrayList and MyLinkedList if it works
+ */
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        /** MyArrayList<Integer> nan = new MyArrayList<>(); //check MyArrayList
+        nan.add(3);
+        nan.add(56);
+        nan.add(55);
+        nan.add(44);
+        nan.add(33);
+        nan.remove(3);
+        nan.removed(3);
+        nan.sort();
+        nan.add(66);
+        //nan.clear();
+        //nan.sortsubl();
+        System.out.println(nan.size());
+        System.out.println(nan.get(3));
+        System.out.println(nan.indexOf(3));
+        System.out.println(nan.lastIndexOf(2));
+        System.out.println(nan.contains(6));
+        for( int i=0; i<nan.size(); i++){
+            System.out.print(nan.get(i) + " ");
+        } */
+        /**
+        MyLinkedList link = new MyLinkedList(); //check MyLinkedList
+        link.add(5);
+        link.add(7);
+        link.add(8);
+        link.add(6);
+        link.add(9,2);
+        link.add(4,3);
+        System.out.println(link.contains(7));
+        System.out.println(link.indexOf(8));
+        System.out.println(link.lastIndexOf(6));
+        link.remove(8);
+        link.removed(4);
+        link.sort();
+        link.clear();
+        for (int i = 0; i<link.size(); i++){
+            System.out.print(link.get(i) + " ");
+        } */
+        // check MyArrayListStack
+        MyArrayListStack<Integer> stack = new MyArrayListStack<Integer>();
+        stack.push(5);
+        stack.push(9);
+        Integer rty = stack.pop();
+        System.out.println(stack.peek());
+        System.out.println(rty);
+        System.out.println(stack.isEmpty());
+        System.out.println(stack.size());
+        // check MyLinkedListQueue
+        MyLinkedListQueue<Integer> queue = new MyLinkedListQueue<Integer>();
+        queue.enqueue(3);
+        queue.enqueue(4);
+        System.out.println(queue.dequeue());
+        System.out.println(queue.peek());
+        System.out.println(queue.isEmpty());
+        System.out.println(queue.size());
+    }
+}     
+```
+
+## Installation
+IntelliJ IDEA 2022.3.1
+## Contributing
+Bug reports and\or pull requests are 
+![gif](https://img.wattpad.com/6c151ba821ca2c749493262d427fb9d0324ec0fc/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f6147354e6948476d6c62704b50673d3d2d3636303937343137322e313537323431383735386537393136303532343031303939363231302e676966)
+
+![welcome](https://poster.keepcalmandposters.com/4220629.jpg)
+
+![bye](https://media2.giphy.com/media/6cfHDQ4NeBk2EltWCs/giphy.gif?cid=6c09b95218247772e91926797670966eaec8ad257b680d25&rid=giphy.gif&ct=g)
