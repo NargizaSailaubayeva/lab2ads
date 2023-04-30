@@ -8,6 +8,12 @@ public class MyLinkedListQueue<E> {
     public void enqueue(E element){
         queue.add(element, size()-1);
     }
+    public E dequeue(){
+        if (isEmpty()){
+            throw new NoSuchElementException();
+        }
+        return queue.removed(0);
+    }
     public boolean isEmpty(){
         if (queue.size() == 0){
             return true;

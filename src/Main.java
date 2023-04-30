@@ -57,6 +57,7 @@ public class Main {
         MyLinkedListQueue<Integer> queue = new MyLinkedListQueue<Integer>();
         queue.enqueue(3);
         queue.enqueue(4);
+        System.out.println(queue.dequeue());
         System.out.println(queue.isEmpty());
         System.out.println(queue.size());
     }
