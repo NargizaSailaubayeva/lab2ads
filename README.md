@@ -550,7 +550,7 @@ public class Main {
 + T dequeue() – Retrieves and deletes the front element of the queue
 ![image](https://user-images.githubusercontent.com/125569063/235354565-1a281ca8-625a-4928-b106-90994aea6e2c.png)
 ![image](https://user-images.githubusercontent.com/125569063/235354589-d3428c2b-60b3-46e1-bdb3-5ecf63ec12ba.png)
-
+___
 **MyArrayListStack**
 ```java
 import java.util.EmptyStackException;
@@ -620,7 +620,7 @@ public class MyArrayListStack<E> {
 }
 
 ```
-         
+___        
 **MyLinkedListQueue**
 
 ```java
@@ -694,7 +694,7 @@ public class MyLinkedListQueue<E> {
 }
 
 ```  
-
+___
 **Main**
 ```java
 /**
@@ -765,6 +765,7 @@ public class Main {
     }
 }     
 ```
+___
 **MyArrayList**
 ```java
 /**
@@ -1002,6 +1003,7 @@ public class MyArrayList<T> implements MyList<T> {
 }
 
 ```
+___
 **MyLinkedList**
 ```java
 import java.util.Collection;
@@ -1214,7 +1216,7 @@ public class MyLinkedList<T> implements MyList<T> {
 }
 
 ```
-
+___
 
 ## Installation
 IntelliJ IDEA 2022.3.1
