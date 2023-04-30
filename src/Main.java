@@ -46,6 +46,7 @@ public class Main {
         for (int i = 0; i<link.size(); i++){
             System.out.print(link.get(i) + " ");
         } */
+        // check MyArrayListStack
         MyArrayListStack<Integer> stack = new MyArrayListStack<Integer>();
         stack.push(5);
         stack.push(9);
@@ -54,6 +55,7 @@ public class Main {
         System.out.println(rty);
         System.out.println(stack.isEmpty());
         System.out.println(stack.size());
+        // check MyLinkedListQueue
         MyLinkedListQueue<Integer> queue = new MyLinkedListQueue<Integer>();
         queue.enqueue(3);
         queue.enqueue(4);
