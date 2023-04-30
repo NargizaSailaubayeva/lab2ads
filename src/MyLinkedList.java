@@ -1,3 +1,5 @@
+import java.util.Collection;
+import java.util.NoSuchElementException;
 /**
  * this is implementation of a linked list in Java, which implements th 'MyList' interface
  * @param <T> the type of elements stored in this list
@@ -40,7 +42,7 @@ public class MyLinkedList<T> implements MyList<T> {
     public boolean contains(Object o) {
         MyNode currentElement = head;
         for (int i = 0; i < size; i++) {
-            if (currentElement.data.equals(o)) {
+            if (currentElement.data == o) {
                 return true;
             }
             currentElement = currentElement.next;
