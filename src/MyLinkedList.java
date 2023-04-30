@@ -52,7 +52,7 @@ public class MyLinkedList<T> implements MyList<T> {
 
     @Override
     public void add(T item) {
-        MyNode newNode = new MyNode(item);
+        MyNode newNode = new MyNode((T) item);
         if (size == 0) {
             head = newNode;
             tail = newNode;
