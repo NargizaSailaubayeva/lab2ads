@@ -19,7 +19,7 @@ public class MyLinkedListQueue<E> {
     /**
      * remove the first elements of queue and return it
      * @return the first elements of the queue
-     * @throws if the queue is empty
+     * @throws NoSuchElementException if the queue is empty
      */
     public E dequeue(){
         if (isEmpty()){
@@ -32,7 +32,7 @@ public class MyLinkedListQueue<E> {
     /**
      * return the first elements of queue
      * @return the first elements of the queue
-     * @throws if the queue is empty
+     * @throws NoSuchElementException if the queue is empty
      */
     public E peek(){
         if (isEmpty()){
