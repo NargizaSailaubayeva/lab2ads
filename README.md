@@ -503,6 +503,7 @@ public class Main {
     }
 }         
 ``` 
+![image](https://user-images.githubusercontent.com/125569063/235355818-8204c1e1-f087-4c42-909b-152a2fb9d6f1.png)
 
 
 # Laboratory 3 Algorithms and Data Structures
