@@ -54,6 +54,6 @@ public class Main {
         System.out.println(rty);
         System.out.println(stack.isEmpty());
         System.out.println(stack.size());
-
+        MyLinkedListQueue<Integer> queue = new MyLinkedListQueue<Integer>();
     }
 }
