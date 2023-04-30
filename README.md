@@ -508,6 +508,7 @@ public class Main {
 
 # Laboratory 3 Algorithms and Data Structures
 ![image](https://user-images.githubusercontent.com/125569063/235355705-2200e22a-3094-4b04-80d3-0872cc96c77b.png)
+![image](https://user-images.githubusercontent.com/125569063/235355865-a43d0758-0a94-4437-a31c-dd10d8357493.png)
 
 ## Description
 ***Stack Implementation***
