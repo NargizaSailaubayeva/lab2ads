@@ -506,6 +506,8 @@ public class Main {
 
 
 # Laboratory 3 Algorithms and Data Structures
+![image](https://user-images.githubusercontent.com/125569063/235355705-2200e22a-3094-4b04-80d3-0872cc96c77b.png)
+
 ## Description
 ***Stack Implementation***
 + Create a new class named MyLinkedListStack for the MyLinkedList implementation or MyArrayListStack for the MyArrayList implementation.
