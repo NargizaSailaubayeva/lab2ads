@@ -536,3 +536,21 @@ Bug reports and\or pull requests are
 + Implement the peek method that returns the front element of the queue without removing it using the getFirst method for MyLinkedList or get method for MyArrayList.
 + Implement the isEmpty method that returns true if the queue is empty or false if it is not using the isEmpty method for MyLinkedList or MyArrayList.
 + Implement the size method that returns the number of elements in the queue using the size method for MyLinkedList or MyArrayList.
+
+***QUEUE and STACK***
++ Stack - It is a linear data structure that follows the LIFO (Last-In-First-Out) principle
++ Queue - It is a linear data structure that follows the FIFO (First-In-First-Out) principle 
+
+***Stack methods***        
++ boolean empty() – Returns whether the stack is empty. Time Complexity : O(1)
++ int size() – Returns the size of the stack. Time Complexity : O(1)
++ T peek() – Returns a reference to the topmost element of the stack. Time Complexity : O(1)
++ T push(T) – Adds the element at the top of the stack. Time Complexity : O(1)
++ T pop() – Retrieves and deletes the topmost element of the stack. Time Complexity : O(1)
+
+***Queue methods***
++ boolean empty() – Returns whether the queue is empty
++ int size() – Returns the size of the queue
++ T peek() – Returns a reference to the front element of the queue
++ T enqueue(T) – Adds the element at the end of the queue
++ T dequeue() – Retrieves and deletes the front element of the queue
