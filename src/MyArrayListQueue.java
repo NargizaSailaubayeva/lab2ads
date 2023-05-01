@@ -16,6 +16,13 @@ public class MyArrayListQueue<E> {
         }
         return queue.removed(0);
     }
+    public E peek() {
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        return queue.get(0);
+    }
+
     public boolean isEmpty() {
         if (queue.size() == 0) {
             return true;

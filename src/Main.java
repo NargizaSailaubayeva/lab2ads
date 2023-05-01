@@ -67,6 +67,7 @@ public class Main {
         q.enqueue(4);
         q.enqueue(8);
         System.out.println(q.dequeue());
+        System.out.println(q.peek());
         System.out.println(q.isEmpty());
     }
 }
