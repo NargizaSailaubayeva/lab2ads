@@ -66,5 +66,6 @@ public class Main {
         MyArrayListQueue<Integer> q = new MyArrayListQueue<>();
         q.enqueue(4);
         q.enqueue(8);
+        System.out.println(q.isEmpty());
     }
 }
