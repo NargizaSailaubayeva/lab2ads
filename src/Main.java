@@ -63,5 +63,8 @@ public class Main {
         System.out.println(queue.peek());
         System.out.println(queue.isEmpty());
         System.out.println(queue.size());
+        MyArrayListQueue<Integer> q = new MyArrayListQueue<>();
+        q.enqueue(4);
+        q.enqueue(8);
     }
 }

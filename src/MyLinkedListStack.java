@@ -3,5 +3,4 @@ public class MyLinkedListStack<E> {
     public MyLinkedListStack() {
         stack = new MyLinkedList<>();
     }
-
 }
