@@ -458,7 +458,32 @@ ___
 
 ### Main
 ```java
-k.add(7);
+public class Main {
+    public static void main(String[] args) {
+        MyArrayList<Integer> nan = new MyArrayList<>(); //check MyArrayList
+        nan.add(3);
+        nan.add(56);
+        nan.add(55);
+        nan.add(44);
+        nan.add(33);
+        nan.remove(3);
+        nan.removed(3);
+        nan.sort();
+        nan.add(66);
+        //nan.clear();
+        //nan.sortsubl();
+        System.out.println(nan.size());
+        System.out.println(nan.get(3));
+        System.out.println(nan.indexOf(3));
+        System.out.println(nan.lastIndexOf(2));
+        System.out.println(nan.contains(6));
+        for( int i=0; i<nan.size(); i++){
+            System.out.print(nan.get(i) + " ");
+        } 
+       
+        MyLinkedList link = new MyLinkedList(); //check MyLinkedList
+        link.add(5);
+        link.add(7);
         link.add(8);
         link.add(6);
         link.add(9,2);
@@ -472,9 +497,7 @@ k.add(7);
         link.clear();
         for (int i = 0; i<link.size(); i++){
             System.out.print(link.get(i) + " ");
-        }
-    }
-}         
+        }        
 ``` 
 ![image](https://user-images.githubusercontent.com/125569063/235355818-8204c1e1-f087-4c42-909b-152a2fb9d6f1.png)
 
