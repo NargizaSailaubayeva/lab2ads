@@ -24,5 +24,7 @@ public class MyLinkedListStack<E> {
         if (stack.size() == 0) return true;
         return false;
     }
-
+    public int size() {
+        return stack.size();
+    }
 }
