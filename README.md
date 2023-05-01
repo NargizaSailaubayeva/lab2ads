@@ -768,6 +768,139 @@ public class Main {
 }     
 ```
 ___
+***MyArrayListQueue***
+```java
+import java.util.NoSuchElementException;
+
+public class MyArrayListQueue<E> {
+    private MyArrayList<E> queue;
+
+    public MyArrayListQueue() { //constructor
+        queue = new MyArrayList<>();
+    }
+    // method enqueue
+    /**
+     * add the element to the queue
+     * @param element the element that will add in queue
+     */
+
+    public void enqueue(E element) {
+        queue.add(element);
+    }
+    // method dequeue
+
+    /**
+     * remove the front element of the queue and return it
+     * @return the front element of the queue
+     * @throws NoSuchElementException if the queue is empty
+     */
+    public E dequeue() {
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        return queue.removed(0);
+    }
+    //method peek
+    /**
+     * return the front element of the queue
+     * @return the front elements of the queue
+     * @throws NoSuchElementException if the queue is empty
+     */
+    public E peek() {
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        return queue.get(0);
+    }
+    // method isEmpty
+
+    /**
+     * if queue is empty return true, if not false
+     * @return true or false
+     */
+    public boolean isEmpty() {
+        if (queue.size() == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    //method size
+    /**
+     * return size or number of elements in queue
+     * @return size
+     */
+    public int size() {
+        return queue.size();
+    }
+}
+
+```
+___
+***MyLinkedListStack***
+```java
+import java.util.EmptyStackException;
+
+public class MyLinkedListStack<E> {
+    private MyLinkedList<E> stack;
+    public MyLinkedListStack() { //constructor
+        stack = new MyLinkedList<>();
+    }
+    // method push
+
+    /**
+     * add the element to the stack
+     * @param element that will be added
+     */
+    public void push(E element) {
+        stack.addFirst(element);
+    }
+    //method pop
+    /**
+     * return top element of the stack and remove it
+     * @return the top element
+     * @throws EmptyStackException if the stack is empty
+     */
+    public E pop() {
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
+        return stack.removed(0);
+    }
+    //method peek
+    /**
+     * return the front element of the stack
+     * @return the front element of the stack
+     * @throws EmptyStackException if the stack is empty
+     */
+    public E peek() {
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
+        return stack.get(0);
+    }
+    // method isEmpty
+
+    /**
+     * if stack is empty return true, if not false
+     * @return true or false
+     */
+    public boolean isEmpty() {
+        if (stack.size() == 0) return true;
+        return false;
+    }
+    //method size
+    /**
+     * return size or number of elements in stack
+     * @return size
+     */
+    public int size() {
+        return stack.size();
+    }
+}
+
+```
+___
 **MyArrayList**
 ```java
 /**
@@ -1099,6 +1232,18 @@ public class MyLinkedList<T> implements MyList<T> {
         }
         size++;
     }
+    public void addFirst(T item) {
+        MyNode currentElement = new MyNode(item);
+        if (head == null) {
+            head = currentElement;
+            tail = currentElement;
+        } else {
+            currentElement.next = head;
+            head.previous = currentElement;
+            head = currentElement;
+        }
+        size++;
+    }
 
     @Override
     public boolean remove(T item) {
@@ -1216,6 +1361,7 @@ public class MyLinkedList<T> implements MyList<T> {
         } while (swapped) ;
     }
 }
+
 
 ```
 ___
