@@ -14,6 +14,12 @@ public class MyLinkedListStack<E> {
         }
         return stack.removed(0);
     }
+    public E peek() {
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
+        return stack.get(0);
+    }
     public boolean isEmpty() {
         if (stack.size() == 0) return true;
         return false;

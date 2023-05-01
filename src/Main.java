@@ -74,6 +74,7 @@ public class Main {
         s.push(6);
         s.push(7);
         System.out.println(s.pop());
+        System.out.println(s.peek());
         System.out.println(s.isEmpty());
     }
 }
