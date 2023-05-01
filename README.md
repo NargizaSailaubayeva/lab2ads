@@ -458,34 +458,7 @@ ___
 
 ### Main
 ```java
-/**
- * check MyArrayList and MyLinkedList if it works
- */
-public class Main {
-    public static void main(String[] args) {
-        Integer[] array = {4,7,8,6,5}; // give array to check it
-        MyArrayList<Integer> nan = new MyArrayList<>(array); //check MyArrayList
-        System.out.println(nan.size());
-        System.out.println(nan.get(3));
-        System.out.println(nan.indexOf(5));
-        System.out.println(nan.lastIndexOf(7));
-        System.out.println(nan.contains(6));
-
-        nan.add(13,2);
-        nan.add(3);
-        nan.add(56);
-        nan.add(55);
-        nan.remove(4);
-        nan.removed(3);
-        nan.sort();
-        nan.clear();
-        for( int i=0; i<nan.size(); i++){
-            System.out.print(nan.get(i) + " ");
-        }
-
-        MyLinkedList link = new MyLinkedList(); //check MyLinkedList
-        link.add(5);
-        link.add(7);
+k.add(7);
         link.add(8);
         link.add(6);
         link.add(9,2);
@@ -765,8 +738,24 @@ public class Main {
         System.out.println(queue.peek());
         System.out.println(queue.isEmpty());
         System.out.println(queue.size());
+        // check MyArrayListQueue
+        MyArrayListQueue<Integer> q = new MyArrayListQueue<>();
+        q.enqueue(4);
+        q.enqueue(8);
+        System.out.println(q.dequeue());
+        System.out.println(q.peek());
+        System.out.println(q.isEmpty());
+        System.out.println(q.size());
+        // check MyLinkedListStack
+        MyLinkedListStack<Integer> s = new MyLinkedListStack<>();
+        s.push(6);
+        s.push(7);
+        System.out.println(s.pop());
+        System.out.println(s.peek());
+        System.out.println(s.isEmpty());
+        System.out.println(s.size());
     }
-}     
+}  
 ```
 ___
 ***MyArrayListQueue***
