@@ -586,8 +586,8 @@ public class MyArrayListStack<E> {
     // method peek
 
     /**
-     * return the first elements of stack
-     * @return the first elements of the stack
+     * return the front element of the stack
+     * @return the front element of the stack
      * @throws EmptyStackException if the stack is empty
      */
     public E peek(){
@@ -645,8 +645,8 @@ public class MyLinkedListQueue<E> {
     // method dequeue
 
     /**
-     * remove the first elements of queue and return it
-     * @return the first elements of the queue
+     * remove the front element of the queue and return it
+     * @return the front element of the queue
      * @throws NoSuchElementException if the queue is empty
      */
     public E dequeue(){
@@ -658,8 +658,8 @@ public class MyLinkedListQueue<E> {
     //method peek
 
     /**
-     * return the first elements of queue
-     * @return the first elements of the queue
+     * return the front element of the queue
+     * @return the front elements of the queue
      * @throws NoSuchElementException if the queue is empty
      */
     public E peek(){
@@ -694,6 +694,7 @@ public class MyLinkedListQueue<E> {
         return queue.size();
     }
 }
+
 
 ```  
 ___
