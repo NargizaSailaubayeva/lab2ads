@@ -63,6 +63,7 @@ public class Main {
         System.out.println(queue.peek());
         System.out.println(queue.isEmpty());
         System.out.println(queue.size());
+        // check MyArrayListQueue
         MyArrayListQueue<Integer> q = new MyArrayListQueue<>();
         q.enqueue(4);
         q.enqueue(8);
@@ -70,6 +71,7 @@ public class Main {
         System.out.println(q.peek());
         System.out.println(q.isEmpty());
         System.out.println(q.size());
+        // check MyLinkedListStack
         MyLinkedListStack<Integer> s = new MyLinkedListStack<>();
         s.push(6);
         s.push(7);

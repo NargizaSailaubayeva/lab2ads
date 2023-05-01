@@ -29,8 +29,8 @@ public class MyArrayListStack<E> {
     // method peek
 
     /**
-     * return the first elements of stack
-     * @return the first elements of the stack
+     * return the front element of the stack
+     * @return the front element of the stack
      * @throws EmptyStackException if the stack is empty
      */
     public E peek(){
