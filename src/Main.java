@@ -73,5 +73,6 @@ public class Main {
         MyLinkedListStack<Integer> s = new MyLinkedListStack<>();
         s.push(6);
         s.push(7);
+        System.out.println(s.isEmpty());
     }
 }
