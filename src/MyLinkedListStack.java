@@ -3,4 +3,7 @@ public class MyLinkedListStack<E> {
     public MyLinkedListStack() {
         stack = new MyLinkedList<>();
     }
+    public void push(E element) {
+        stack.addFirst(element);
+    }
 }

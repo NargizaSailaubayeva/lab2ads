@@ -70,5 +70,8 @@ public class Main {
         System.out.println(q.peek());
         System.out.println(q.isEmpty());
         System.out.println(q.size());
+        MyLinkedListStack<Integer> s = new MyLinkedListStack<>();
+        s.push(6);
+        s.push(7);
     }
 }

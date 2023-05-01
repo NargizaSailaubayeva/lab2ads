@@ -89,6 +89,18 @@ public class MyLinkedList<T> implements MyList<T> {
         }
         size++;
     }
+    public void addFirst(T item) {
+        MyNode currentElement = new MyNode(item);
+        if (head == null) {
+            head = currentElement;
+            tail = currentElement;
+        } else {
+            currentElement.next = head;
+            head.previous = currentElement;
+            head = currentElement;
+        }
+        size++;
+    }
 
     @Override
     public boolean remove(T item) {
