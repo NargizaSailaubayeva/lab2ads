@@ -10,7 +10,12 @@ public class MyArrayListQueue<E> {
     public void enqueue(E element) {
         queue.add(element);
     }
-
+    public E dequeue() {
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        return queue.removed(0);
+    }
     public boolean isEmpty() {
         if (queue.size() == 0) {
             return true;
