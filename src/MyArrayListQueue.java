@@ -30,4 +30,7 @@ public class MyArrayListQueue<E> {
             return false;
         }
     }
+    public int size() {
+        return queue.size();
+    }
 }
